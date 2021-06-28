@@ -25,12 +25,12 @@ const MainNavigation = () => {
       </Link>
       <nav>
         <ul>
-          {((!isLoggedIn) && location.pathname != signInPath) && (
+          {((!isLoggedIn) && location.pathname !== signInPath) && (
             <li>
               <Link to={signInPath}>Login</Link>
             </li>
           )}
-          {((!isLoggedIn) && location.pathname != signUpPath) && (
+          {((!isLoggedIn) && location.pathname !== signUpPath) && (
             <li>
               <Link to={signUpPath}>Open account</Link>
             </li>

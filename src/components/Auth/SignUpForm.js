@@ -68,7 +68,6 @@ const SignUpForm = (props) => {
       if (err) {
         console.log(err);
       } else {
-        console.log("user created");
         props.userCreationCallBack(true);
       }
     });
@@ -99,7 +98,7 @@ const SignUpForm = (props) => {
 
   const submitHandler = (event) => {
     event.preventDefault();
-    console.log(dobDate.toUTCString());
+    //console.log(dobDate.toUTCString());
     if (accountType == null) {
       dispatchAlertWarning({
         message: "Please select account type.",

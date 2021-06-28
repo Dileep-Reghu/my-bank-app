@@ -1,11 +1,11 @@
 import { Fragment } from "react";
 import TitleBar from "../components/Layout/TitleBar";
-import LoanForm from "../components/Loan/LoanForm";
+import Loans from "../components/Loan/Loans";
 const LoanPage = () => {
   return (
     <Fragment>
-      <TitleBar title = "Apply Loan Form"/>
-      <LoanForm />
+      <TitleBar title = "Manage Loans"/>
+      <Loans />
     </Fragment>
   );;
 };

@@ -19,7 +19,6 @@ import creditCardImg from "../../img/creditcard.jpg";
 
 const StartingPageContent = () => {
   const authCtx = useContext(AuthContext);
-  //console.log(authCtx);
   const isLoggedIn = authCtx.isLoggedIn;
   return (
     <section id={classes.tmWelcome} className={classes["parallax-window"]}>

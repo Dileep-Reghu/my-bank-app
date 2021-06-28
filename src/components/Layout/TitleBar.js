@@ -7,7 +7,7 @@ const TitleBar = (props) => {
     <Fragment>
       <Jumbotron className={classes["head-bg-grey-transparent"]} fluid>
         <Container>
-          <h3 class="display-10">{props.title}</h3>
+          <h3 className="display-10">{props.title}</h3>
         </Container>
       </Jumbotron>
     </Fragment>
