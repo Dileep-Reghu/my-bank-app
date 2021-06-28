@@ -1,0 +1,179 @@
+.starting {
+  margin: 3rem auto;
+  text-align: center;
+}
+
+.starting h1 {
+  font-size: 5rem;
+}
+
+.parallax-window {
+  min-height: 80rem;
+  background: transparent;
+  background-image: url(../../img/mini-profile-bg-01.jpg);
+}
+
+.tm-bg-black-transparent {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.tm-bg-white-transparent {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/*
+  Welcome section
+*/
+#tmWelcome {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.tm-brand-container-outer {
+  margin-top: -57rem;
+}
+
+.tm-brand-container-inner {
+  max-width: 33rem;
+  width: 100%;
+}
+
+.tm-brand-container {
+  padding: 50px 110px;
+}
+
+.tm-brand-name {
+  font-size: 2.8rem;
+}
+
+.tm-brand-description {
+  font-size: 1.3rem;
+}
+
+#tmContact {
+  min-height: 1197px;
+}
+
+.tm-welcome-container {
+  min-height: 400px;
+  position: absolute; top: 300px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+}
+
+.tm-welcome-title {
+  margin-bottom: 40px;
+}
+
+.tm-welcome-left {
+  padding-right: 30px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.tm-welcome-left-col {
+  display: flex;
+  align-items: center;
+}
+
+.tm-welcome-right {
+  color: white;
+  background-color: #986665;
+  padding: 80px 43px 70px;
+  height: 100%;
+  margin-top: 1px;
+}
+
+.tm-welcome-icon {
+  margin-bottom: 50px;
+  display: block;
+  text-align: center;
+}
+
+.fas {
+  font-family: "Font Awesome 5 Free";
+}
+
+.fa-4x {
+  font-size: 4em;
+}
+
+.fa-address-card:before {
+  content: "\f2bb";
+}
+
+.col-12 {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col-md-5,
+.col-md-7,
+.col-xl-auto {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.text-white {
+  color: #fff !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.p-3{padding:1rem!important}
+
+.pb-0,
+.py-0 {
+  padding-bottom: 0 !important;
+}
+
+.ml-auto,
+.mx-auto {
+  margin-left: auto !important;
+}
+
+.mr-0,
+.mx-0 {
+  margin-right: 0 !important;
+}
+
+.mb-0,
+.my-0 {
+  margin-bottom: 0 !important;
+}
+
+.h-100 {
+  height: 100% !important;
+}
+
+.card-container {
+  margin-top: 1rem;
+  display: block;
+  width: 100%;
+}
+
+.card {
+  float: left;
+  margin: 1rem;
+  padding: 1px 1px;
+  width: 18rem;
+}

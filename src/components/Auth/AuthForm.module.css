@@ -1,0 +1,118 @@
+.auth {
+  margin: 15rem auto;
+  width: 95%;
+  max-width: 25rem;
+  border-radius: 6px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  text-align: center;
+}
+
+.auth h1 {
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+.control {
+  margin-bottom: 0.5rem;
+}
+
+.control label {
+  display: block;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  margin-left: 0.1rem;
+  float: left;
+}
+
+.control input {
+  font: inherit;
+  background-color: #ffffff;
+  color: #38015c;
+  border-radius: 2px;
+  border: 1px solid rgb(197, 196, 196);
+  width: 100%;
+  text-align: left;
+  padding: 0.25rem;
+}
+
+.actions {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.actions button {
+  cursor: pointer;
+  font: inherit;
+  color: white;
+  background-color: #db0011;
+  border: 1px solid #db0011;
+  border-radius: 4px;
+  padding: 0.5rem 2.5rem;
+}
+
+.actions button:hover {
+  background-color: #64050c;
+  border-color: #64050c;
+}
+
+.actions .toggle {
+  margin-top: 1rem;
+  background-color: transparent;
+  color: #0f090a;
+  border: none;
+  padding: 0.15rem 1.5rem;
+}
+
+.actions .toggle:hover {
+  background-color: transparent;
+  color: #e41c29;
+}
+
+h6 {
+  text-align: center;
+  color: rgb(252, 21, 21);
+}
+
+.parallax-window {
+  min-height: 50rem;
+  background: transparent;
+  background-image: url(../../img/bg1.jpg);
+}
+
+.tm-bg-white-transparent {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.tm-welcome-container {
+  min-height: 400px;
+  position: absolute; top: 300px;
+  bottom: 0;
+  left: 0;
+  width: 60%;
+  display: flex;
+  align-items: stretch;
+}
+
+.tm-welcome-title {
+  margin-bottom: 40px;
+}
+
+.tm-welcome-left {
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.icon-align {
+  text-align: center;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  border-radius: 0.25rem 0rem 0rem 0.25rem;
+  width: 2.5rem;
+}
