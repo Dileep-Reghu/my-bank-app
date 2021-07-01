@@ -8,11 +8,15 @@
   margin-bottom: 0.5rem;
 }
 
-.control label {
+.control .label {
   font-weight: bold;
   margin-bottom: 0.5rem;
   color: #353336;
   display: block;
+}
+
+.control .labelnormal {
+  font-weight: normal;
 }
 
 .control input {
@@ -25,25 +29,55 @@
   background-color: #f7f0fa;
 }
 
-.action {
+.actions {
   margin-top: 1.5rem;
+  display: flex;
+  flex-direction: row;             /* flex items will align horizontally */
+  justify-content: center; 
+  align-items: center;
 }
 
-.action button {
-  font: inherit;
+.actions button {
   cursor: pointer;
-  padding: 0.5rem 1.5rem;
-  border-radius: 4px;
-  background-color: #38015c;
+  font: inherit;
   color: white;
-  border: 1px solid #38015c;
+  background-color: #db0011;
+  border: 1px solid #db0011;
+  border-radius: 4px;
+  padding: 0.5rem 2.5rem;
 }
 
-.action button:hover {
-  background-color: #540d83;
-  border-color: #540d83;
+.actions .leftmargin {
+  margin-left: 1.5rem;
+  cursor: pointer;
+  font: inherit;
+  color: #f0ad4e;
+  background-color: white;
+  border: 1px solid #f0ad4e;
+  border-radius: 4px;
+  padding: 0.5rem 2.5rem;
 }
 
+.actions button:hover {
+  background-color: #d9534f;
+  border-color: #d9534f;
+}
+
+.actions .leftmargin:hover {
+  color: white;
+  background-color: #f0ad4e;
+  border-color: #f0ad4e;
+}
+
+h6.error {
+  text-align: center;
+  color: #d9534f;
+}
+
+h6.warning {
+  text-align: center;
+  color:#f0ad4e;
+}
 
 .icon-align {
   text-align: center;

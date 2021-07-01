@@ -1,12 +1,17 @@
-import ProfileForm from './ProfileForm';
-import classes from './UserProfile.module.css';
-import TitleBar from "../Layout/TitleBar";
+import {useState} from 'react';
+import ProfileForm from "./ProfileForm";
+import classes from "./UserProfile.module.css";
+import ProfileTitleBar from "../Profile/ProfileTitleBar";
 const UserProfile = () => {
+  const [isEditing, setIsEditing] = useState(false);
+  const editHandler = (status) =>{
+    setIsEditing(status);
+  }
   return (
-    <section className={classes.profile}>
-      <TitleBar title="User Profile" />
-      <ProfileForm />
-    </section>
+    <div className={classes.profile}>
+      <ProfileTitleBar isEditing = {isEditing} title="User Profile" updateEditStatus={editHandler}/>
+      <ProfileForm isEditing = {isEditing} updateEditStatus={editHandler}/>
+    </div>
   );
 };
 

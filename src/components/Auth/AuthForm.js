@@ -16,7 +16,7 @@ import FormControl from "react-bootstrap/FormControl";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faKey } from "@fortawesome/free-solid-svg-icons";
 
-import firebaseDb from "../../firebase";
+import firebase from "../../firebase";
 
 const AuthForm = () => {
   const emailRef = useRef();
@@ -26,8 +26,8 @@ const AuthForm = () => {
   const { isLoading, error, sendRequest: signInUser } = useHttp();
 
   const fetchUser = (obj) => {
+    const firebaseDb = firebase.database().ref('/users');
     firebaseDb
-      .child("users")
       .orderByChild("userId")
       .equalTo(obj.userId)
       .on("value", (snapshot) => {
@@ -37,8 +37,6 @@ const AuthForm = () => {
         var uId = snap[key].userId;
 
         if (custdata.userId === uId) {
-          console.log("Fetch User");
-          console.log(custdata);
           authCtx.login({
             ...obj,userName:custdata.userName
           })

@@ -1,0 +1,8 @@
+.head-bg-grey-transparent {
+  background-color:rgb(255, 254, 254);
+  text-align: center;
+  padding-top: 0.6rem;
+  padding-bottom: 0.1rem;
+  border-bottom: 1px solid lightgray;
+  margin-bottom: 0.5rem;
+}

@@ -53,8 +53,18 @@
   cursor: pointer;
 }
 
-.header a:hover {
-  color: #ca767d;
+.header a:hover{
+  color: #d8ad1e;
+}
+.header a:active,
+.header a.active {
+  color: #d8ad1e;
+  padding-bottom: 0.25rem;
+  border-bottom: 3px solid #f7f5f5;
+}
+.header a.inactive {
+  padding-bottom: 0rem;
+  border-bottom: 0px solid #f7f5f5;
 }
 
 .header button:hover {

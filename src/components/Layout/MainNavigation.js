@@ -1,48 +1,55 @@
 //import logo from "./myBankLogo.png";
 import logo from "../../icons/banklogo.png";
-import { Link, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useContext } from "react";
-import {useHistory} from 'react-router-dom';
+import { useHistory } from "react-router-dom";
 import classes from "./MainNavigation.module.css";
 import AuthContext from "../../store/auth-context";
-import { signInPath, signUpPath, profilePath, loanPath} from '../../constants/index'
+import {
+  homePath,
+  signInPath,
+  signUpPath,
+  profilePath,
+  loanPath,
+} from "../../constants/index";
 const MainNavigation = () => {
   const authCtx = useContext(AuthContext);
   const history = useHistory();
   const isLoggedIn = authCtx.isLoggedIn;
-  const location = useLocation();
-  console.log(location);
 
   const logoutHandler = () => {
     authCtx.logout();
-    history.replace('/');
+    history.replace("/");
   };
 
   return (
     <header className={classes.header}>
-      <Link to="/">
+      <NavLink activeClassName={classes.inactive} to={homePath}>
         <img src={logo} className="App-logo" alt="logo" />
-      </Link>
+      </NavLink>
       <nav>
         <ul>
-          {((!isLoggedIn) && location.pathname !== signInPath) && (
+          <li>
+            <NavLink activeClassName={classes.active} to={homePath} exact>Home</NavLink>
+          </li>
+          {!isLoggedIn && (
             <li>
-              <Link to={signInPath}>Login</Link>
+              <NavLink activeClassName={classes.active} to={signInPath}>Login</NavLink>
             </li>
           )}
-          {((!isLoggedIn) && location.pathname !== signUpPath) && (
+          {!isLoggedIn && (
             <li>
-              <Link to={signUpPath}>Open account</Link>
+              <NavLink activeClassName={classes.active} to={signUpPath}>Open account</NavLink>
             </li>
           )}
           {isLoggedIn && (
             <li>
-              <Link to={profilePath}>Profile</Link>
+              <NavLink activeClassName={classes.active} to={profilePath}>Profile</NavLink>
             </li>
           )}
           {isLoggedIn && (
             <li>
-              <Link to={loanPath}>Apply Loan</Link>
+              <NavLink activeClassName={classes.active} to={loanPath}>Apply Loan</NavLink>
             </li>
           )}
           {isLoggedIn && (

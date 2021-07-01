@@ -4,7 +4,8 @@ import Form from "react-bootstrap/Form";
 import Select from "react-select";
 
 import classes from "./LoanForm.module.css";
-import firebaseDb from "../../firebase";
+import firebase from "../../firebase";
+
 const alertWarningReducer = (state, action) => {
   return { message: action.message, showWarning: action.show };
 };
@@ -49,7 +50,8 @@ const LoanForm = () => {
   };
 
   const applyLoan = (obj) => {
-    firebaseDb.child("loans").push(obj, (err) => {
+    const firebaseDb = firebase.database().ref('/loans');
+    firebaseDb.push(obj, (err) => {
       if (err) {
         console.log(err);
       } else {

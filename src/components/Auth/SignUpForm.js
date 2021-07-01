@@ -11,8 +11,6 @@ import InputGroup from "react-bootstrap/InputGroup";
 import Form from "react-bootstrap/Form";
 import FormControl from "react-bootstrap/FormControl";
 
-//import DatePicker from "react-datepicker";
-//import "react-datepicker/dist/react-datepicker.css";
 import Select from "react-select";
 import DateFnsUtils from "@date-io/date-fns";
 import { DatePicker, MuiPickersUtilsProvider } from "@material-ui/pickers";
@@ -28,8 +26,7 @@ import {
   faMobileAlt,
 } from "@fortawesome/free-solid-svg-icons";
 
-import firebaseDb from "../../firebase";
-
+import firebase from "../../firebase";
 
 const alertWarningReducer = (state, action) => {
   return { message: action.message, showWarning: action.show };
@@ -64,7 +61,8 @@ const SignUpForm = (props) => {
   ];
 
   const createUser = (obj) => {
-    firebaseDb.child("users").push(obj, (err) => {
+    const firebaseDb = firebase.database().ref('/users');
+    firebaseDb.push(obj, (err) => {
       if (err) {
         console.log(err);
       } else {

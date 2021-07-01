@@ -8,16 +8,16 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Table from "react-bootstrap/Table";
 
-import firebaseDb from "../../firebase";
+//import firebaseDb from "../../firebase";
+import firebase from "../../firebase";
 
 const Loans = () => {
   const authCtx = useContext(AuthContext);
   const [listLoans, setListLoans] = useState({});
 
   useEffect(() => {
-    console.log(authCtx.userData.userId);
+    const firebaseDb = firebase.database().ref('/loans');
     firebaseDb
-      .child("loans")
       .orderByChild("userId")
       .equalTo(authCtx.userData.userId)
       .on("value", (snapshot) => {
