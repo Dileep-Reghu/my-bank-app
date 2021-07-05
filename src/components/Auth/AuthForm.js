@@ -95,8 +95,8 @@ const AuthForm = () => {
         </Col>
         <Col>
           <section className={classes.auth}>
-            {error && <h6 className="warning">Login Failed!</h6>}
-            <Form onSubmit={submitHandler}>
+            {error && <h6 className="warning" data-testid="warning-label">Login Failed!</h6>}
+            <Form onSubmit={submitHandler} data-testid="submit-login">
               <div className={classes.control}>
                 <label htmlFor="email">Email address</label>
                 <InputGroup>
@@ -113,6 +113,7 @@ const AuthForm = () => {
                     aria-label="Email"
                     aria-describedby="account email"
                     ref={emailRef}
+                    data-testid="email-input"
                   />
                 </InputGroup>
               </div>
@@ -132,11 +133,12 @@ const AuthForm = () => {
                     aria-label="Password"
                     aria-describedby="account password"
                     ref={passwordRef}
+                    data-testid="password-input"
                   />
                 </InputGroup>
               </div>
               <div className={classes.actions}>
-                {isLoading ? <LoadingSpinner /> : <button>Login</button>}
+                {isLoading ? <LoadingSpinner /> : <button type="submit">Login</button>}
               </div>
             </Form>
           </section>
